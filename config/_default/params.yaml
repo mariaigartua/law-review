@@ -6,8 +6,8 @@
 # Appearance
 
 appearance:
-  theme_day: minimal
-  theme_night:
+  theme: "mount_holyoke"  
+  color: "mount_holyoke"
   font: native
   font_size: L
 
@@ -116,3 +116,8 @@ extensions:
 publications:
   date_format: January 2006
   citation_style: apa
+
+params:
+  custom_css:
+    - css/themes/mount_holyoke.css
+  color: "mount_holyoke"  # Ensure it uses our custom theme
