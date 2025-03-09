@@ -1,9 +1,348 @@
+/* Import Montserrat (Mount Holyoke alternative font) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* 🎨 Define Mount Holyoke Colors */
+$mh-dark-blue: #002D62;  /* Primary Dark Blue (Navbar & Footer) */
+$mh-light-blue: #12A7E0; /* Light Blue Accent */
+$mh-white: #FFFFFF;       /* White Background */
+$mh-gray: #ffffff;        /* Light Gray Sections */
+$mh-black: #000000;       /* Black Text */
+
+/* 🖋 Apply Fonts and Base Styles */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    background-color: $mh-white !important;
+    color: $mh-dark-blue !important;
+}
+
+/* 🔵 NAVBAR (Header) */
+nav {
+    background-color: $mh-dark-blue !important;
+    height: 6vw !important;  /* Ensures full viewport width */
+    font-size: 1.0rem !important;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 3rem; /* Adjust height as needed */
+    margin-right: 10px; /* Space between logo and title */
+    vertical-align: middle;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $mh-white !important;
+}
+
+nav a {
+    color: $mh-white !important;
+}
+
+nav a:hover {
+    color: $mh-light-blue !important;
+}
+
+/* 🟦 HERO SECTION */
+.hero-block {
+    background-color: $mh-dark-blue !important;
+    color: $mh-white !important;
+    padding: 50px 0;
+}
+
+.hero-block .hero-title {
+    font-size: 2.8rem !important;
+    font-weight: 700 !important;
+    color: $mh-white !important;
+}
+
+.hero-block .hero-text {
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+    color: $mh-white !important;
+}
+
+/* Left-align the "Latest Articles" title */
+.mtholyoke-articles .section-heading {
+    text-align: left !important;
+    padding-left: 50px;
+}
+/* Ensure "Latest Articles" title is left-aligned */
+.mtholyoke-articles h2, 
+.mtholyoke-articles .collection-title, 
+.mtholyoke-articles .section-title {
+    text-align: left !important;
+    padding-left: 50px;
+
+}
+/* Force left-alignment on all collection titles */
+.collection .section-heading, 
+.collection h2 {
+    text-align: left !important;
+    padding-left: 50px;
+
+}
+
+
+
+/* ⚪ FIX: Background After Hero Section */
+section:not(.hero-block) {
+    background-color: $mh-white !important;
+    color: $mh-dark-blue !important;
+    text-align: left !important;
+
+}
+
+/* 🟦 FOOTER (Match Navbar) */
+/* 🎨 Full-Width Footer Fix */
+footer {
+  background-color: #002D62 !important; /* Mount Holyoke Dark Blue */
+  color: #FFFFFF !important; /* White Text */
+  width: 100vw !important;  /* Ensures full viewport width */
+  margin-left: calc(-50vw + 50%); /* Fixes width issue */
+  padding: 30px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Footer Content Wrapper */
+.footer-container {
+  max-width: 1200px; /* Ensures content is centered */
+  margin: 0 auto;
+}
+
+/* Footer Text */
+.footer-text {
+  max-width: 800px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Footer Links */
+footer a {
+  color: #12A7E0 !important; /* Light Blue Links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline;
+}
+
+
+
+/* 🔵 BUTTONS */
+button, .btn {
+    background-color: $mh-light-blue !important;
+    color: $mh-white !important;
+}
+
+button:hover, .btn:hover {
+    background-color: $mh-dark-blue !important;
+    color: $mh-white !important;
+}
+
+/* 🔷 HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+    color: $mh-dark-blue !important;
+}
+
+/* 📌 FIX LIGHT GRAY SECTIONS */
+.section-bg {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* 🔹 LINKS */
+a {
+    color: $mh-light-blue !important;
+}
+
+a:hover {
+    color: darken($mh-light-blue, 10%) !important;
+}
+
+
 // Make page header alignment consistent with widget page header alignment
 .universal-wrapper h1 {
-  text-align: center;
+  text-align: left;
 }
 
 // Center the CTA shortcode button
 .cta-group {
-  justify-content: center;
+  justify-content: left;
+}
+
+
+/* Fix search box width and alignment */
+.search-box input {
+    width: 80% !important; /* Adjust the width */
+    border-radius: 10px !important;
+    padding: 10px;
+    background-color: #FFFFFF !important; /* Make it white */
+    color: #000000 !important; /* Make text visible */
+}
+
+/* Fix dark backgrounds in sections */
+section {
+    background-color: #FFFFFF !important; /* Ensures clean contrast */
+}
+
+/* 🎨 CARD STYLING FIX */
+.mtholyoke-articles {
+    .card {
+        background-color: #ffffff !important; /* Light Gray Background */
+        color: #222 !important; /* Dark Text for Readability */
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        a {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .btn {
+            background-color: $mh-dark-blue !important;
+            color: $mh-white !important;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: darken($mh-dark-blue, 10%) !important;
+            }
+        }
+    }
+}
+
+
+
+/* 🛠 FIX DARK BACKGROUNDS IN SECTIONS */
+section:not(.hero-block) {
+    background-color: #FFFFFF !important; /* Ensures Clean Contrast */
+    color: $mh-dark-blue !important;
+    text-align: left !important;
+}
+
+/* ✅ APPLYING FIXES WITHOUT OVERWRITING EXISTING STYLES */
+/* 🎨 Fix Card Background and Text Colors */
+.card {
+    background-color: #FFFFFF !important; /* White background */
+    color: #002D62 !important; /* Dark blue text */
+    border: 1px solid #D3D3D3 !important; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 20px;
+}
+
+/* Card Title */
+.card h3, 
+.card h2, 
+.card-title {
+    color: #002D62 !important; /* Dark blue title */
+    font-weight: bold;
+}
+
+/* Card Meta Information (Author, Date) */
+.card .article-metadata, 
+.card p {
+    color: #ffffff !important; /* Medium-dark gray for contrast */
+}
+
+/* Buttons Inside Cards */
+.card .btn {
+    background-color: #12A7E0 !important; /* Light Blue */
+    color: #FFFFFF !important; /* White text */
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+}
+
+.card .btn:hover {
+    background-color: #002D62 !important; /* Dark Blue on hover */
+}
+
+/* 🔍 SEARCH BAR FIX */
+.navbar-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    background-color: #FFFFFF !important; /* White background */
+
+}
+
+.search-box {
+    width: 250px !important; /* Adjust width */
+    position: relative;
+}
+
+.search-box input {
+    width: 100% !important;
+    border-radius: 20px !important;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #FFFFFF !important; /* White background */
+    color: $mh-dark-blue !important; /* Ensures text is readable */
+    border: 2px solid $mh-dark-blue !important;
+    transition: all 0.3s ease-in-out;
+
+    &::placeholder {
+        color: #666 !important;
+        font-style: italic;
+    }
+
+    &:focus {
+        outline: none !important;
+        border-color: $mh-light-blue !important;
+        box-shadow: 0 0 6px rgba(18, 167, 224, 0.5);
+    }
+}
+
+/* 🔍 SEARCH ICON FIX */
+.search-box::before {
+    content: "🔍";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: $mh-dark-blue;
+}
+
+.search-box input {
+    padding-left: 35px !important; /* Ensure text doesn’t overlap the icon */
+}
+
+/* 🔍 SEARCH RESULTS DROPDOWN FIX */
+.search-results {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.search-box input:focus + .search-results {
+    display: block; /* Show results when searching */
 }

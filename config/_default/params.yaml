@@ -6,51 +6,65 @@
 # Appearance
 
 appearance:
-  theme: "mount_holyoke"  
+  theme: "mount_holyoke"
   color: "mount_holyoke"
   font: native
   font_size: L
 
 # SEO
 
-marketing:
-  seo:
-    site_type: Organization
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
-    twitter: 'GetResearchDev'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''
-  verification:
-    google: ''
-    baidu: ''
+# marketing:
+#   seo:
+#     site_type: Organization
+#     local_business_type: ''
+#     org_name: ''
+#     description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
+#     twitter: 'GetResearchDev'
+#   analytics:
+#     google_analytics: ''
+#     baidu_tongji: ''
+#     google_tag_manager: ''
+#     microsoft_clarity: ''
+#   verification:
+#     google: ''
+#     baidu: ''
 
 # Site header
-
 header:
   navbar:
     enable: true
-    align: r
+    align: r 
+    show_title: true
     show_logo: true
     show_language: false
     show_day_night: true
     show_search: true
     highlight_active_link: false
+    logo:
+      filename: "logo.svg"  # Ensure "icon.png" is in `assets/media/`
+      height: 90px  # Set a reasonable height (e.g., 50px for a navbar logo)
+    button:
+      enable: true
+      text: "Get Started"
+      url: "https://hugoblox.com/templates/"
+
 
 # Site footer
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Mount Holyoke College Undergraduate Law Journal. <br>This publication is published by students at Mount Holyoke College, and MHC is not responsible for its contents'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
+  social:
+    - name: Instagram
+      brand: instagram
+      url: "https://instagram.com/yourhandle"
+    - name: LinkedIn
+      icon: fab fa-linkedin
 
 # Localization
 
@@ -121,3 +135,15 @@ params:
   custom_css:
     - css/themes/mount_holyoke.css
   color: "mount_holyoke"  # Ensure it uses our custom theme
+
+# header:
+#   navbar:
+#     enable: true
+#     show_logo: true
+
+# logo:
+#   path: "/assets/media/icon.png" # Adjust the path based on where your logo is stored
+#   alt: "Mount Holyoke Law Journal Logo"
+#   height: 40px
+
+

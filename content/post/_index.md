@@ -1,5 +1,5 @@
 ---
-title: Latest News
+title: Latest Articles
 
 # Listing view
 view: compact
@@ -9,3 +9,4 @@ banner:
   caption: ''
   image: ''
 ---
+
