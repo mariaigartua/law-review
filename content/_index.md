@@ -7,8 +7,8 @@ type: landing
 sections:
   - block: hero
     content:
-      title: |
-        <span style="color: white;">Mount Holyoke College Law Journal</span>
+      # title: |
+      #   <span style="color: white;">Mount Holyoke College Law Journal</span>
 
       text: |
         <br>
@@ -34,7 +34,6 @@ sections:
           parallax: true
           # Text color (true=light, false=dark, or remove for the dynamic theme color).
           text_color_light: true
-      css_class: "mtholyoke-hero"
 
       # background:
       #   # Choose colors such as from https://html-color-codes.info
@@ -47,7 +46,7 @@ sections:
 
   - block: collection
     content:
-      title:  Latest News
+      title:  Latest Articles
       subtitle:
       text:
       count: 5
@@ -88,8 +87,10 @@ sections:
         {{% cta cta_link="./people/" cta_text="Meet the Team →" %}}
 
     design:
-      css_class: "mtholyoke-articles"
+      css_class: "mtholyoke-meetboard"
       columns: '1'
       view: card
+      # background:
+      #   color: 'navy'
 
 ---

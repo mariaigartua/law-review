@@ -18,7 +18,6 @@ body {
 /* 🔵 NAVBAR (Header) */
 nav {
     background-color: $mh-dark-blue !important;
-    height: 6vw !important;  /* Ensures full viewport width */
     font-size: 1.0rem !important;
 }
 
@@ -52,7 +51,8 @@ nav a:hover {
     background-color: $mh-dark-blue !important;
     color: $mh-white !important;
     padding: 50px 0;
-}
+    width: 100vw; /* Full viewport width */
+    min-height: 100vh; /* Full viewport height */}
 
 .hero-block .hero-title {
     font-size: 2.8rem !important;
@@ -82,7 +82,7 @@ nav a:hover {
 /* Force left-alignment on all collection titles */
 .collection .section-heading, 
 .collection h2 {
-    text-align: left !important;
+    text-align: center !important;
     padding-left: 50px;
 
 }
@@ -95,6 +95,12 @@ section:not(.hero-block) {
     color: $mh-dark-blue !important;
     text-align: left !important;
 
+}
+
+.mtholyoke-meetboard{
+    background-color: $mh-white !important;
+    color: $mh-dark-blue !important;
+    text-align: center !important;
 }
 
 /* 🟦 FOOTER (Match Navbar) */
@@ -246,7 +252,6 @@ section:not(.hero-block) {
 .card {
     background-color: #FFFFFF !important; /* White background */
     color: #002D62 !important; /* Dark blue text */
-    border: 1px solid #D3D3D3 !important; /* Light gray border */
     border-radius: 8px; /* Slightly rounded corners */
     padding: 20px;
 }
@@ -345,4 +350,135 @@ section:not(.hero-block) {
 
 .search-box input:focus + .search-results {
     display: block; /* Show results when searching */
+}
+
+/* ==================================== */
+/* 📱 FIX MOBILE RESPONSIVE LAYOUT COLORS */
+/* ==================================== */
+
+/* 🔵 MOBILE NAVIGATION MENU */
+@media (max-width: 768px) {
+    /* Fix Mobile Menu Dropdown */
+    .navbar-collapse {
+        background-color: #002D62 !important; /* Dark Blue Background */
+        padding: 15px;
+    }
+
+    /* Fix Mobile Menu Items */
+    .navbar-collapse a {
+        color: #FFFFFF !important; /* White Text */
+        font-size: 1.2rem;
+        padding: 10px;
+        display: block;
+    }
+
+    .navbar-collapse a:hover {
+        background-color: #12A7E0 !important; /* Light Blue Hover */
+        color: #FFFFFF !important;
+        border-radius: 5px;
+    }
+
+    /* Fix Menu Toggle Button (Hamburger) */
+    .navbar-toggler {
+        background-color: transparent !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: none !important;
+        color: #FFFFFF !important; /* Ensures visibility */
+        font-size: 1.8rem !important;
+    }
+}
+
+/* 🟦 HERO SECTION RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .hero-block {
+        padding: 30px 0 !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .hero-text {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+/* 🎨 TEXT VISIBILITY FIX FOR RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-block .hero-text b {
+        background-color: transparent !important;
+        color: #FFFFFF !important;
+        padding: 5px;
+        border-radius: 3px;
+    }
+}
+
+/* 🟦 RESPONSIVE DROPDOWN MENU */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        background-color: #002D62 !important; /* Dark Blue */
+        border: none !important;
+        padding: 10px;
+    }
+
+    .dropdown-menu a {
+        color: #FFFFFF !important;
+        font-size: 1.1rem;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #12A7E0 !important; /* Light Blue Hover */
+        color: #FFFFFF !important;
+        border-radius: 5px;
+    }
+}
+
+/* 🔍 SEARCH ICON VISIBILITY FIX */
+@media (max-width: 768px) {
+    .search-box input {
+        font-size: 14px;
+        padding: 10px 12px;
+        width: 90% !important;
+    }
+}
+
+/* ==================================== */
+/* MEET THE TEAM */
+/* ==================================== */
+
+/* ✅ Center the "Meet the Team" Button */
+.mtholyoke-meetboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures text inside is centered */
+    margin-top: 20px; /* Adds spacing above */
+    min-height: 50px; /* Set a smaller minimum height */
+
+    
+}
+
+/* 🔘 Center CTA button inside */
+.mtholyoke-meetboard .cta-group {
+    display: flex;
+    justify-content: center;
+}
+
+/* Fix button styling */
+.mtholyoke-meetboard .btn {
+    display: inline-block;
+    background-color: #12A7E0 !important; /* Light Blue */
+    color: #FFFFFF !important; /* White Text */
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.mtholyoke-meetboard .btn:hover {
+    background-color: #002D62 !important; /* Dark Blue Hover */
 }

@@ -1,0 +1,8 @@
+/* Fix Hero Section Height */
+.mtholyoke-hero {
+    min-height: 80vh !important; /* Adjusts height to 80% of the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0; /* Ensures spacing */
+}

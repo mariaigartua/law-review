@@ -38,22 +38,25 @@ header:
     show_logo: true
     show_language: false
     show_day_night: true
-    show_search: true
+    show_search: false
     highlight_active_link: false
     logo:
       filename: "logo.svg"  # Ensure "icon.png" is in `assets/media/`
       height: 90px  # Set a reasonable height (e.g., 50px for a navbar logo)
     button:
-      enable: true
+      enable: false
       text: "Get Started"
       url: "https://hugoblox.com/templates/"
+    mobile_menu:
+      enable: true
 
 
 # Site footer
 
 footer:
   copyright:
-    notice: '© {year} Mount Holyoke College Undergraduate Law Journal. <br>This publication is published by students at Mount Holyoke College, and MHC is not responsible for its contents'
+    notice: '© {year} Mount Holyoke College Undergraduate Law Journal. <br>This publication is published by students at Mount Holyoke College, and MHC is not responsible for its contents
+            <br>Contact us or follow us on our [social media channels](https://www.instagram.com/mhclawjournal/)!'
     license:
       enable: false
       allow_derivatives: false
@@ -104,13 +107,13 @@ features:
       repo_id: ''
       category: ''
       category_id: ''
-  search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
+  # search:
+  #   provider: wowchemy
+  #   algolia:
+  #     app_id: ''
+  #     api_key: ''
+  #     index_name: ''
+  #     show_logo: false
   map:
     provider: 'mapnik'
     api_key: ''
